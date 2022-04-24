@@ -23,7 +23,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--nlp_pipeline", default="spacy", type=str, help="NLP preprocessing pipeline.")
-    parser.add_argument("--sentiment_analyzer", default="afinn", type=str, help="Selected sentimen analyzer.")
+    parser.add_argument("--sentiment_analyzer", default="afinn", type=str, help="Selected sentiment analyzer.")
     
     args = parser.parse_args()
 
