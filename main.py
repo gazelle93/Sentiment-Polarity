@@ -9,8 +9,11 @@ def main(args):
             "This is certinaly not a good idea."]
 
     for sen in text_list:
+        # Sentence sentiment analysis
         print("Sentence: {} -> Polarity: {}".format(sen,
                                                     sentence_sentiment_analysis(sen, args.sentiment_analyzer)))
+        
+        # Token sentiment analysis
         cul_tks = word_tokenization(sen, args.nlp_pipeline)
         for tk, pol in zip(cul_tks, words_sentiment_analysis(cul_tks, args.sentiment_analyzer)):
             print("Token: {} {}".format(tk, pol))
